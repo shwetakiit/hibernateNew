@@ -8,7 +8,7 @@ package kumari.shweta;
 
 import kumari.shweta.DTO.UserDeatilsDTO;
 
-public class UserDeatilsDAO extends HibernateDAO<UserDeatilsDTO>{
+public class UserDeatilsDAO extends HibernateDAO<UserDeatilsDTO> {
 
     public UserDeatilsDAO(Class<UserDeatilsDTO> className) {
         super(className);

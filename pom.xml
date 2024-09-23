@@ -16,12 +16,24 @@
     </properties>
     <dependencies>
 
-        <dependency>
+<!--
+
+                <dependency>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate-core</artifactId>
+                    <version>6.5.0.Final</version>
+                </dependency>
+-->
+
+
+
+        <!-- Changed Hibernate version for enabling second level cache -->
+       <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>6.5.0.Final</version>
-
+            <version>5.3.36.Final</version>
         </dependency>
+
 
         <dependency>
             <groupId>mysql</groupId>
@@ -30,6 +42,21 @@
         </dependency>
 
 
+        <!--  Eh Cache must be same has hibernate core version  -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>5.3.36.Final</version>
+        </dependency>
+
+        <!-- Compatible version for hibernate eh cache 5.3.36 -->
+
+        <!-- https://mvnrepository.com/artifact/net.sf.ehcache/ehcache -->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>2.10.3</version>
+        </dependency>
     </dependencies>
 
 </project>

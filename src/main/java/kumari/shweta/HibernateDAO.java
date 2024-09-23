@@ -9,20 +9,19 @@ package kumari.shweta;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class HibernateDAO<T>{
+public class HibernateDAO<T> {
 
-protected  Class<T> elemClass;
-protected  String name;
-Session session =HibernateUtil.getSession();
+    protected Class<T> elemClass;
+    protected String name;
+    Session session = HibernateUtil.getSession();
 
-public HibernateDAO(Class<T> className){
-this.elemClass = className;
-}
+    public HibernateDAO(Class<T> className) {
+        this.elemClass = className;
+    }
 
-public static <T> HibernateDAO<T> getDAO(Class<T> className){
+    public static <T> HibernateDAO<T> getDAO(Class<T> className) {
         return new HibernateDAO<>(className);
-}
-
+    }
 
     public T save(T entity) {
         Transaction tx = session.beginTransaction();
@@ -36,7 +35,6 @@ public static <T> HibernateDAO<T> getDAO(Class<T> className){
         try {
             session.save(entity);
             tx.commit();
-            ;
         } catch (Exception e) {
 
             if (tx != null) {

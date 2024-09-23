@@ -7,10 +7,10 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class HibernateUtil {
 
-    private static  StandardServiceRegistry standardServiceRegistry;
-    private static  SessionFactory sessionFactory;
+    private static final StandardServiceRegistry standardServiceRegistry;
+    private static final SessionFactory sessionFactory;
 
-   private static ThreadLocal<Session> threadLocal = new ThreadLocal<>();
+   private static final ThreadLocal<Session> threadLocal = new ThreadLocal<>();
 
     private static  HibernateUtil hibernateUtil=null;
 
